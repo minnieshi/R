@@ -1,0 +1,45 @@
+setwd("d:/DataScience/R/week2/specdata/")  ==> shall not change wd inside a function, unless you change it back.
+data <- read.csv("001.csv")
+
+sprintf("%03d.csv", 1)
+
+data$sulfate			===>can not use computed index this way, instead use 
+	data[[sulfate]]
+nas<-is.na(data$sulfate)	
+data$sulfate[!nas]
+
+outside of the loop, use below to put all data together
+Empty vectors can be created with the vector() function.
+
+z<-vector(mode = "numeric")
+c(x,y)
+
+
+--------------
+data <- read.csv("specdata/001.csv")
+good <- complete.cases(data$sulfate, data$nitrate)
+subset(data,good)
+nrow(subset(data,good))
+
+outside of the loop, use below to put all data together
+Empty vectors can be created with the vector() function.
+z<-vector(mode = "numeric")
+
+use below to combine vector
+c(x,y)
+
+use below to combine columns
+cbind(id, djfskfjdskfj)
+
+---
+data <- read.csv("specdata/001.csv")
+completeObs <- complete("specdata")
+take <- completeObs[["nobs"]]> 600
+filteredid <-completeObs["id"][take]
+
+for loop
+collect sulfate column
+collect nitric column
+end loop
+
+calculates the correlation between sulfate and nitrate 

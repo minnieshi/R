@@ -1,0 +1,14 @@
+18,19,20 questions are not easy for me....
+
+q18:
+> q18<-subset(data,Ozone>31 & Temp>90, select=Solar.R, drop = TRUE)
+> mean(q18,na.rm=TRUE)
+
+
+q19:
+> month6<-subset(data,Month==6,select=Temp,drop=TRUE)
+> mean(month6,na.rm=TRUE)
+
+Q20:
+> q20<-subset(data,Month==5,select=Ozone,drop=TRUE)
+> max(q20,na.rm=TRUE)
